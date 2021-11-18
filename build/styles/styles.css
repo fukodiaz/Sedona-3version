@@ -26,7 +26,7 @@ img {
   max-width: 100%;
   height: auto;
 }
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -531,14 +531,17 @@ img {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   margin: 0 20px;
 }
 .review__fieldset {
   margin: 0;
   padding: 0;
   border: none;
+}
+.review__fieldset--feeling {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 .review__legend {
   text-align: center;
@@ -558,6 +561,9 @@ img {
 }
 .review__legend--feeling {
   margin-bottom: 38px;
+}
+.review__legend--sight {
+  margin-bottom: 33px;
 }
 .review__list {
   margin: 0;
@@ -584,18 +590,18 @@ img {
 }
 .review__label--feeling,
 .review__label--sight {
-  font-weight: 700;
-  text-transform: none;
-}
-.review__label--feeling {
   display: inline-block;
   position: relative;
   margin-left: 79px;
-  margin-bottom: 47px;
+  font-weight: 700;
+  text-transform: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+.review__label--feeling {
+  margin-bottom: 47px;
 }
 .review__label--feeling[for="hard"] {
   margin-bottom: 43px;
@@ -609,6 +615,39 @@ img {
   height: 56px;
   border-radius: 50%;
   background-color: #f2f2f2;
+}
+.review__label--feeling:hover::before {
+  background-color: #e5e5e5;
+}
+.review__label--feeling:active::before,
+.review__label--feeling:focus::before {
+  background-color: #d5d5d5;
+}
+.review__label--sight {
+  margin-bottom: 56px;
+}
+.review__label--sight[for="rocks"] {
+  margin-bottom: 42px;
+}
+.review__label--sight::before {
+  content: '';
+  position: absolute;
+  left: -79px;
+  bottom: -18px;
+  width: 56px;
+  height: 56px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+.review__label--sight:hover::before {
+  background-color: #e5e5e5;
+}
+.review__label--sight:active::before,
+.review__label--sight:focus::before {
+  background-color: #d5d5d5;
+}
+.review__legend--emotions {
+  margin-bottom: 17px;
 }
 .review__input--personal-data,
 .review__input--contacts {
@@ -673,6 +712,15 @@ img {
   -ms-flex-preferred-size: 208px;
   flex-basis: 208px;
 }
+.review__input--personal-data:hover {
+  background-color: #e5e5e5;
+}
+.review__input--personal-data:active,
+.review__input--personal-data:focus {
+  background-color: #ffffff;
+  outline: 4px solid #e5e5e5;
+  outline-offset: -4px;
+}
 .review__input--contacts {
   padding-right: 80px;
 }
@@ -687,6 +735,28 @@ img {
   background-image: url('../images/mail.svg'), linear-gradient(to left, #e6e6e6 0%, #e6e6e6 58px, #f2f2f2 59px, #f2f2f2 100%);
   background-repeat: no-repeat;
   background-position: right 21px top 23px, 0 0;
+}
+.review__input--feeling:checked + .review__label--feeling::before {
+  background-image: radial-gradient(at 50% 50%, #333333 11px, #f2f2f2 12px);
+}
+.review__input--feeling:checked + .review__label--feeling:hover::before {
+  background-image: radial-gradient(at 50% 50%, #333333 11px, #e5e5e5 12px);
+}
+.review__input--feeling:checked + .review__label--feeling:active::before,
+.review__input--feeling:checked + .review__label--feeling:focus::before {
+  background-image: radial-gradient(at 50% 50%, rgba(51, 51, 51, 0.3) 11px, #d5d5d5 12px);
+}
+.review__input--sight:checked + .review__label--sight::before {
+  background-image: url('../images/tick.svg');
+  background-repeat: no-repeat;
+  background-position: right 15px top 20px;
+}
+.review__input--sight:checked + .review__label--sight:active::before,
+.review__input--sight:checked + .review__label--sight:focus::before {
+  background-color: #d5d5d5;
+  background-image: url('../images/tick-down.svg');
+  background-repeat: no-repeat;
+  background-position: right 15px top 20px;
 }
 .review__textarea {
   -webkit-box-sizing: border-box;
@@ -1160,6 +1230,8 @@ img {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     margin: 0 8%;
     padding-top: 40px;
   }
