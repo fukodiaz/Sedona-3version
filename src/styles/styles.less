@@ -800,15 +800,55 @@ img {
 
 	&[id="tel"] {
 		margin-bottom: 15px;
-		background-image: url('../images/tel.svg'), linear-gradient(to left, #e6e6e6 0%, #e6e6e6 58px, #f2f2f2 59px, #f2f2f2 100%);
+		background-image: url('../images/tel.svg'), linear-gradient(to left, #e6e6e6 0%, #e6e6e6 58px, #f2f2f2 58px, #f2f2f2 100%);
 		background-repeat: no-repeat;
 		background-position: right 19px top 20px, 0 0;
 	}
 	&[id="mail"] {
 		margin-bottom: 28px;
-		background-image: url('../images/mail.svg'), linear-gradient(to left, #e6e6e6 0%, #e6e6e6 58px, #f2f2f2 59px, #f2f2f2 100%);
+		background-image: url('../images/mail.svg'), linear-gradient(to left, #e6e6e6 0%, #e6e6e6 58px, #f2f2f2 58px, #f2f2f2 100%);
 		background-repeat: no-repeat;
 		background-position: right 21px top 23px, 0 0;
+	}
+
+	&:hover {
+		&[id="tel"] {
+			background-image: url('../images/tel.svg'), linear-gradient(to left, #d5d5d5 58px, #e5e5e5 58px);
+			background-repeat: no-repeat;
+			background-position: right 19px top 20px, 0 0;
+		}
+		&[id="mail"] {
+			background-image: url('../images/mail.svg'), linear-gradient(to left, #d5d5d5 58px, #e5e5e5 58px);
+			background-repeat: no-repeat;
+			background-position: right 21px top 23px, 0 0;
+		}
+	}
+	&:active,
+	&:focus {
+			&[id="tel"] {
+				background-image: url('../images/tel.svg'), 
+				linear-gradient(to left, #d5d5d5 58px, transparent 58px),
+				linear-gradient(to top, #e5e5e5 3px, transparent 3px),
+				linear-gradient(to bottom, #e5e5e5 3px, transparent 3px),
+				linear-gradient(to left, transparent 58px, #e5e5e5 58px, #e5e5e5 61px, transparent 61px),
+				linear-gradient(to right, #e5e5e5 3px, transparent 3px),
+				linear-gradient(to left, #d5d5d5 58px, #ffffff 58px);
+				background-repeat: no-repeat;
+				background-position: right 19px top 20px, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+			}
+			&[id="mail"] {
+				background-image: url('../images/mail.svg'), 
+				linear-gradient(to left, #d5d5d5 58px, transparent 58px),
+				linear-gradient(to top, #e5e5e5 3px, transparent 3px),
+				linear-gradient(to bottom, #e5e5e5 3px, transparent 3px),
+				linear-gradient(to left, transparent 58px, #e5e5e5 58px, #e5e5e5 61px, transparent 61px),
+				linear-gradient(to right, #e5e5e5 3px, transparent 3px),
+				linear-gradient(to left, #d5d5d5 58px, #ffffff 58px);
+				background-repeat: no-repeat;
+				background-position: right 21px top 23px, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+				//outline: 4px solid #e5e5e5;
+				//outline-offset: -4px;
+			}
 	}
 }
 
@@ -845,7 +885,6 @@ img {
 			&:active,
 			&:focus {
 				&::before {
-					background-color: #d5d5d5;
 					background-image: url('../images/tick-down.svg');
 					background-repeat: no-repeat;
 					background-position: right 15px top 20px;
@@ -858,6 +897,7 @@ img {
 
 
 .review__textarea {
+	margin-bottom: 51px;
 	box-sizing: border-box;
 	padding: 19px 21px;
 	width: 100%;
@@ -871,6 +911,16 @@ img {
 		line-height: 24px;
 		color: #000000;
 		}
+
+	&:hover {
+		background-color: #e5e5e5;
+	}
+	&:active,
+	&:focus	{
+		background-color: #ffffff;
+		outline: 4px solid #e5e5e5;
+		outline-offset: -4px;
+	}
 }
 
 @media (max-width:767px) {
@@ -1419,6 +1469,10 @@ img {
 	margin-bottom: 57px;
 }
 
+.review__legend--feeling {
+	margin-bottom: 73px;
+}
+
 .review__legend--contacts,
 .review__legend--sight {
 	text-align: center;
@@ -1433,7 +1487,12 @@ img {
 	margin-bottom: 25px;
 }
 
+.review__legend--sight {
+	margin-bottom: 42px;
+}
+
 .review__legend--emotions {
+	margin-bottom: 57px;
 	padding: 0 77px 0 73px;
 }
 
@@ -1443,6 +1502,39 @@ img {
 			margin-bottom: 0;
 		}
 	}
+}
+
+.review__list--sight {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 38px;
+	& .review__item {
+		display: flex;
+		align-items: center;
+		flex-basis: 50%;
+		margin-bottom: 32px;
+		min-height: 56px;
+		&:nth-child(2n) {
+			& .review__label--sight {
+				margin-left: 110px;
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.review__label--feeling {
+	margin-left: 75px;
+	margin-bottom: 55px;
+
+	&::before {
+		left: -75px;
+	}
+}
+
+.review__label--sight {
+	margin-bottom: 0;
+	margin-left: 174px;
 }
 
 .review__input--personal-data {
@@ -1464,6 +1556,10 @@ img {
 	&[id="mail"] {
 		margin-bottom: 0;
 	}
+}
+
+.review__textarea {
+	margin-bottom: 58px;
 }
 
 }
@@ -1699,7 +1795,6 @@ img {
 		margin-bottom: 73px;
 	}
 
-
 	.review__list--contacts {
 		display: flex;
 		flex-wrap: wrap;
@@ -1710,6 +1805,10 @@ img {
 			flex-basis: 50%;
 			margin-bottom: 55px;
 		}
+	}
+
+	.review__label--feeling {
+		margin-left: 80px;
 	}
 
 	.review__label--contacts {

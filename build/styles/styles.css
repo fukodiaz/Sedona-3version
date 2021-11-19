@@ -726,15 +726,37 @@ img {
 }
 .review__input--contacts[id="tel"] {
   margin-bottom: 15px;
-  background-image: url('../images/tel.svg'), linear-gradient(to left, #e6e6e6 0%, #e6e6e6 58px, #f2f2f2 59px, #f2f2f2 100%);
+  background-image: url('../images/tel.svg'), linear-gradient(to left, #e6e6e6 0%, #e6e6e6 58px, #f2f2f2 58px, #f2f2f2 100%);
   background-repeat: no-repeat;
   background-position: right 19px top 20px, 0 0;
 }
 .review__input--contacts[id="mail"] {
   margin-bottom: 28px;
-  background-image: url('../images/mail.svg'), linear-gradient(to left, #e6e6e6 0%, #e6e6e6 58px, #f2f2f2 59px, #f2f2f2 100%);
+  background-image: url('../images/mail.svg'), linear-gradient(to left, #e6e6e6 0%, #e6e6e6 58px, #f2f2f2 58px, #f2f2f2 100%);
   background-repeat: no-repeat;
   background-position: right 21px top 23px, 0 0;
+}
+.review__input--contacts:hover[id="tel"] {
+  background-image: url('../images/tel.svg'), linear-gradient(to left, #d5d5d5 58px, #e5e5e5 58px);
+  background-repeat: no-repeat;
+  background-position: right 19px top 20px, 0 0;
+}
+.review__input--contacts:hover[id="mail"] {
+  background-image: url('../images/mail.svg'), linear-gradient(to left, #d5d5d5 58px, #e5e5e5 58px);
+  background-repeat: no-repeat;
+  background-position: right 21px top 23px, 0 0;
+}
+.review__input--contacts:active[id="tel"],
+.review__input--contacts:focus[id="tel"] {
+  background-image: url('../images/tel.svg'), linear-gradient(to left, #d5d5d5 58px, transparent 58px), linear-gradient(to top, #e5e5e5 3px, transparent 3px), linear-gradient(to bottom, #e5e5e5 3px, transparent 3px), linear-gradient(to left, transparent 58px, #e5e5e5 58px, #e5e5e5 61px, transparent 61px), linear-gradient(to right, #e5e5e5 3px, transparent 3px), linear-gradient(to left, #d5d5d5 58px, #ffffff 58px);
+  background-repeat: no-repeat;
+  background-position: right 19px top 20px, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+}
+.review__input--contacts:active[id="mail"],
+.review__input--contacts:focus[id="mail"] {
+  background-image: url('../images/mail.svg'), linear-gradient(to left, #d5d5d5 58px, transparent 58px), linear-gradient(to top, #e5e5e5 3px, transparent 3px), linear-gradient(to bottom, #e5e5e5 3px, transparent 3px), linear-gradient(to left, transparent 58px, #e5e5e5 58px, #e5e5e5 61px, transparent 61px), linear-gradient(to right, #e5e5e5 3px, transparent 3px), linear-gradient(to left, #d5d5d5 58px, #ffffff 58px);
+  background-repeat: no-repeat;
+  background-position: right 21px top 23px, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
 }
 .review__input--feeling:checked + .review__label--feeling::before {
   background-image: radial-gradient(at 50% 50%, #333333 11px, #f2f2f2 12px);
@@ -753,12 +775,12 @@ img {
 }
 .review__input--sight:checked + .review__label--sight:active::before,
 .review__input--sight:checked + .review__label--sight:focus::before {
-  background-color: #d5d5d5;
   background-image: url('../images/tick-down.svg');
   background-repeat: no-repeat;
   background-position: right 15px top 20px;
 }
 .review__textarea {
+  margin-bottom: 51px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 19px 21px;
@@ -793,6 +815,15 @@ img {
   font: 700 18px 'PT Sans Narrow';
   line-height: 24px;
   color: #000000;
+}
+.review__textarea:hover {
+  background-color: #e5e5e5;
+}
+.review__textarea:active,
+.review__textarea:focus {
+  background-color: #ffffff;
+  outline: 4px solid #e5e5e5;
+  outline-offset: -4px;
 }
 @media (max-width: 767px) {
   .site-navigat {
@@ -1284,6 +1315,9 @@ img {
   .review__legend--personal-data {
     margin-bottom: 57px;
   }
+  .review__legend--feeling {
+    margin-bottom: 73px;
+  }
   .review__legend--contacts,
   .review__legend--sight {
     text-align: center;
@@ -1296,11 +1330,50 @@ img {
   .review__legend--contacts {
     margin-bottom: 25px;
   }
+  .review__legend--sight {
+    margin-bottom: 42px;
+  }
   .review__legend--emotions {
+    margin-bottom: 57px;
     padding: 0 77px 0 73px;
   }
   .review__list--personal-data .review__item:last-child {
     margin-bottom: 0;
+  }
+  .review__list--sight {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 38px;
+  }
+  .review__list--sight .review__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    margin-bottom: 32px;
+    min-height: 56px;
+  }
+  .review__list--sight .review__item:nth-child(2n) .review__label--sight {
+    margin-left: 110px;
+    margin-bottom: 0;
+  }
+  .review__label--feeling {
+    margin-left: 75px;
+    margin-bottom: 55px;
+  }
+  .review__label--feeling::before {
+    left: -75px;
+  }
+  .review__label--sight {
+    margin-bottom: 0;
+    margin-left: 174px;
   }
   .review__input--personal-data[name='name'] {
     -ms-flex-preferred-size: 216px;
@@ -1319,6 +1392,9 @@ img {
   }
   .review__input--contacts[id="mail"] {
     margin-bottom: 0;
+  }
+  .review__textarea {
+    margin-bottom: 58px;
   }
 }
 @media (min-width: 1280px) {
@@ -1502,6 +1578,9 @@ img {
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
     margin-bottom: 55px;
+  }
+  .review__label--feeling {
+    margin-left: 80px;
   }
   .review__label--contacts {
     margin: 0;
