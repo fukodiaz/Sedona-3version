@@ -103,6 +103,27 @@ img {
 	cursor: pointer;
 }
 
+.button--blue {
+	padding: 0;
+	font: 700 21px 'PT Sans Narrow';
+	line-height: 24px;
+	text-transform: uppercase;
+	color: #ffffff;
+	background-color: #81b3d2;
+
+	&:hover {
+		background-color: #669ec0;
+	}
+
+	&:active {
+		color: rgba(255, 255, 255, 0.3);
+		background-color: #5496bd;
+	}
+	&[disabled] {
+		background-color: #e5e5e5;
+	}
+}
+
 .site-navigat-button {
 	position: absolute;
 	background-color: transparent;
@@ -401,27 +422,8 @@ img {
 .search-hotel__button {
 	display: inline-block;
 	margin: 0 auto;
-	padding: 0;
-	font: 700 21px 'PT Sans Narrow';
-	line-height: 24px;
-	text-transform: uppercase;
-	color: #ffffff;
 	width: 280px;
 	height: 58px;
-	background-color: #81b3d2;
-
-	&:hover {
-		background-color: #669ec0;
-	}
-
-	&:active {
-		color: rgba(255, 255, 255, 0.3);
-		background-color: #5496bd;
-	}
-	&[disabled] {
-		background-color: #e5e5e5;
-	}
-
 }
 
 .map__image {
@@ -921,6 +923,16 @@ img {
 		outline: 4px solid #e5e5e5;
 		outline-offset: -4px;
 	}
+}
+
+.review__button {
+	margin: 0 auto 39px;
+	width: 280px;
+	height: 58px;
+}
+
+.review__pointing {
+	display: none;
 }
 
 @media (max-width:767px) {
@@ -1562,6 +1574,25 @@ img {
 	margin-bottom: 58px;
 }
 
+.review__send {
+	display: flex;
+	align-items: baseline;
+	flex-basis: 100%;
+	margin-bottom: 61px;
+}
+
+.review__button {
+	margin: 0;
+	flex-basis: 324px;
+}
+
+.review__pointing {
+	display: block;
+	margin-left: auto;
+	font-size: 14px;
+	color: #333333;
+}
+
 }
 
 @media (min-width: 1280px) {
@@ -1795,6 +1826,10 @@ img {
 		margin-bottom: 73px;
 	}
 
+	.review__legend--sight {
+		margin-bottom: 43px;
+	}
+
 	.review__list--contacts {
 		display: flex;
 		flex-wrap: wrap;
@@ -1804,6 +1839,33 @@ img {
 			align-items: baseline;
 			flex-basis: 50%;
 			margin-bottom: 55px;
+		}
+	}
+
+	.review__list--sight {
+		margin-bottom: 36px;
+		& .review__item {
+			flex-basis: 25%;
+
+			&:nth-child(2n) {
+				& .review__label--sight {
+					&[for="mountain"] {
+						margin-left: 100px;
+					}
+					&[for="rocks"] {
+						margin-left: 116px;
+					}
+				}
+			}
+		}
+	}
+
+	.review__label--sight {
+		&[for="bridge"] {
+			margin-left: 81px;
+		}
+		&[for="park"] {
+			margin-left: 118px;
 		}
 	}
 
@@ -1841,6 +1903,14 @@ img {
 			margin-bottom: 0;
 			flex-basis: 330px;
 		}
+	}
+
+	.review__send {
+		margin-bottom: 66px;
+	}
+
+	.review__button {
+		flex-basis: 480px;
 	}
 
 

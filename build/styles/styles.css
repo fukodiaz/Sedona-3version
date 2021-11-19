@@ -88,6 +88,24 @@ img {
   outline: none;
   cursor: pointer;
 }
+.button--blue {
+  padding: 0;
+  font: 700 21px 'PT Sans Narrow';
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #81b3d2;
+}
+.button--blue:hover {
+  background-color: #669ec0;
+}
+.button--blue:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
+}
+.button--blue[disabled] {
+  background-color: #e5e5e5;
+}
 .site-navigat-button {
   position: absolute;
   background-color: transparent;
@@ -357,24 +375,8 @@ img {
 .search-hotel__button {
   display: inline-block;
   margin: 0 auto;
-  padding: 0;
-  font: 700 21px 'PT Sans Narrow';
-  line-height: 24px;
-  text-transform: uppercase;
-  color: #ffffff;
   width: 280px;
   height: 58px;
-  background-color: #81b3d2;
-}
-.search-hotel__button:hover {
-  background-color: #669ec0;
-}
-.search-hotel__button:active {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #5496bd;
-}
-.search-hotel__button[disabled] {
-  background-color: #e5e5e5;
 }
 .map__image {
   position: relative;
@@ -824,6 +826,14 @@ img {
   background-color: #ffffff;
   outline: 4px solid #e5e5e5;
   outline-offset: -4px;
+}
+.review__button {
+  margin: 0 auto 39px;
+  width: 280px;
+  height: 58px;
+}
+.review__pointing {
+  display: none;
 }
 @media (max-width: 767px) {
   .site-navigat {
@@ -1396,6 +1406,28 @@ img {
   .review__textarea {
     margin-bottom: 58px;
   }
+  .review__send {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    margin-bottom: 61px;
+  }
+  .review__button {
+    margin: 0;
+    -ms-flex-preferred-size: 324px;
+    flex-basis: 324px;
+  }
+  .review__pointing {
+    display: block;
+    margin-left: auto;
+    font-size: 14px;
+    color: #333333;
+  }
 }
 @media (min-width: 1280px) {
   .wrapper-primary {
@@ -1561,6 +1593,9 @@ img {
   .review__legend--contacts {
     margin-bottom: 73px;
   }
+  .review__legend--sight {
+    margin-bottom: 43px;
+  }
   .review__list--contacts {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1578,6 +1613,25 @@ img {
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
     margin-bottom: 55px;
+  }
+  .review__list--sight {
+    margin-bottom: 36px;
+  }
+  .review__list--sight .review__item {
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+  }
+  .review__list--sight .review__item:nth-child(2n) .review__label--sight[for="mountain"] {
+    margin-left: 100px;
+  }
+  .review__list--sight .review__item:nth-child(2n) .review__label--sight[for="rocks"] {
+    margin-left: 116px;
+  }
+  .review__label--sight[for="bridge"] {
+    margin-left: 81px;
+  }
+  .review__label--sight[for="park"] {
+    margin-left: 118px;
   }
   .review__label--feeling {
     margin-left: 80px;
@@ -1610,5 +1664,12 @@ img {
     margin-bottom: 0;
     -ms-flex-preferred-size: 330px;
     flex-basis: 330px;
+  }
+  .review__send {
+    margin-bottom: 66px;
+  }
+  .review__button {
+    -ms-flex-preferred-size: 480px;
+    flex-basis: 480px;
   }
 }
