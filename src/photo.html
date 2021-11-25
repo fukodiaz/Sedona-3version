@@ -152,7 +152,7 @@
 				</ul>
 			</section>
 
-			<section class="video-container">
+			<section class="video-wrapper">
 				<header class="header-inner header-inner--video">
 					<h2 class="header-inner__heading header-inner__heading--video">Все еще сомневаетесь?</h2>
 					<p class="header-inner__description header-inner__description--video">
@@ -160,30 +160,38 @@
 					</p>
 				</header>
 
-				<div class="video">
-					<picture>
+				<div class="video-container">
+					<!-- <picture>
 						<source media="(min-width:1280px)" srcset="images/poster-video-desktop.jpg">
 						<source media="(min-width:768px)" srcset="images/poster-video-tablet.jpg">
 						<img src="images/poster-video-mobile.jpg" alt="Видеопрезентация не может быть воспроизведена">
-					</picture>
+					</picture> -->
+					<video width="100%" height="100%" controls>
+						<source media="(min-width:1280px)" poster="images/poster-video-desktop.jpg">
+						<source media="(min-width:768px)" poster="images/poster-video-tablet.jpg">
+						<source poster="images/poster-video-mobile.jpg">
+					</video>
+
 					<div class="controls video__controls">
 						<div class="controls__box">
-							<button class="controls__button-scroller" type="button"></button>
+							<button class="button controls__button-scroller" type="button"></button>
+							<input class="controls__range" type="range">
 						</div>
 
 						<div class="controls__operations">
-							<button class="controls__button-replay" type="button">
+							<button class="button controls__button controls__button-replay" type="button">
 								<svg width="16" height="20">
 									<use xlink:href="images/replay.svg#replay"></use>
 								</svg>
 							</button>
+							<input class="controls__range controls__range--operations" type="range">
 
-							<button class="controls__button-subtitles" type="button">
+							<button class="button controls__button controls__button-subtitles" type="button">
 								<svg width="32" height="20">
 									<use xlink:href="images/subtitles.svg#subtitles"></use>
 								</svg>
 							</button>
-							<button class="controls__button-fullscreen" type="button">
+							<button class="button controls__button controls__button-fullscreen" type="button">
 								<svg width="20" height="20">
 									<use xlink:href="images/fullscreen.svg#fullscreen"></use>
 								</svg>
