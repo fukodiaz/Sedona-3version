@@ -454,7 +454,7 @@ h1, h2, h3, p  {
 	flex-wrap: wrap;
 	padding: 36px 0 32px;
 	text-align: center;
-	background-color: rgba(254, 254, 254, 0.9);
+	background-color: #ffffff;
 }
 
 .hashtag {
@@ -1106,7 +1106,7 @@ h1, h2, h3, p  {
 //video
 
 .video-wrapper {
-	padding-bottom: 143px;
+	padding-bottom: 107px;
 }
 
 .video-container {
@@ -1115,17 +1115,56 @@ h1, h2, h3, p  {
 	height: 201px;
 }
 
+.video-container__poster {
+	position: absolute;
+	bottom:0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	background: url('../images/poster-video-mobile.jpg') no-repeat bottom center;
+}
+
 .video__controls {
 	position: absolute;
 	left: 20px;
 	right: 20px;
 	bottom: -66px;
+	z-index: 101;
 	width: 280px;
 }
 
 .controls__box {
+	display: flex;
+	align-items: center;
 	height: 45px;
 	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.controls__range {
+	margin: 0 auto;
+	flex-basis: 235px; 
+	height: 3px;
+	appearance: none;
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.2);
+
+	&::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		width: 9px;
+		height: 9px;
+		border-radius: 50%;
+		background-color: #fff;
+		
+	}
+	&::-moz-range-thumb {
+		-moz-appearance: none;
+		width: 9px;
+		height: 9px;
+		border-radius: 50%;
+		background-color: #ffffff;
+		
+	}
 }
 
 .controls__operations {
@@ -1139,6 +1178,14 @@ h1, h2, h3, p  {
 	padding: 0;
 	color: #5c6870;
 	background-color: transparent;
+
+	&:hover {
+		color: #333333;
+	}
+	&:focus,
+	&:active {
+		color: rgba(51, 51, 51, 0.3);
+	}
 }
 
 .controls__range--operations {
@@ -1978,10 +2025,18 @@ h1, h2, h3, p  {
 
 //video
 
+.video-wrapper {
+	padding-bottom: 40px;
+}
+
 .video-container {
 	margin: 0 auto;//7.81%;
 	width: 84.37%;
 	height: 500px;
+}
+
+.video-container__poster {
+	background-image: url('../images/poster-video-tablet.jpg');
 }
 
 .video__controls {
@@ -2002,10 +2057,19 @@ h1, h2, h3, p  {
 
 .controls__button {
 	color: #ffffff;
+
+	&:hover {
+		color: rgba(255, 255, 255, 0.6);
+	}
+	&:active,
+	&:focus {
+		color: rgba(255, 255, 255, 0.3);
+	}
 }
 
 .controls__range--operations {
 	display: inline-block;
+	margin-left: 0;
 	margin-right: 42px;
 	flex-basis: 389px;
 }
@@ -2409,9 +2473,17 @@ h1, h2, h3, p  {
 
 //video
 
+.video-wrapper {
+	padding-bottom: 85px;
+}
+
 .video-container {
 	width: 800px;
 	
+}
+
+.video-container__poster {
+	background-image: url('../images/poster-video-desktop.jpg');
 }
 
 .controls__range--operations {

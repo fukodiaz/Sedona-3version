@@ -164,18 +164,17 @@
 					<!-- <picture>
 						<source media="(min-width:1280px)" srcset="images/poster-video-desktop.jpg">
 						<source media="(min-width:768px)" srcset="images/poster-video-tablet.jpg">
-						<img src="images/poster-video-mobile.jpg" alt="Видеопрезентация не может быть воспроизведена">
-					</picture> -->
-					<video width="100%" height="100%" controls>
-						<source media="(min-width:1280px)" poster="images/poster-video-desktop.jpg">
-						<source media="(min-width:768px)" poster="images/poster-video-tablet.jpg">
-						<source poster="images/poster-video-mobile.jpg">
+						<img class="video-container__poster" src="images/poster-video-mobile.jpg">
+					</picture>  -->
+					<p class="video-container__poster"></p>
+					<video class="video-container__video" width="100%" height="100%">
 					</video>
 
 					<div class="controls video__controls">
 						<div class="controls__box">
-							<button class="button controls__button-scroller" type="button"></button>
-							<input class="controls__range" type="range">
+							<!-- <button class="button controls__button-scroller" type="button"></button> -->
+							<input class="controls__range" type="range" name="range-video" min="0" max="100" value="17"
+								step="1">
 						</div>
 
 						<div class="controls__operations">
@@ -184,7 +183,8 @@
 									<use xlink:href="images/replay.svg#replay"></use>
 								</svg>
 							</button>
-							<input class="controls__range controls__range--operations" type="range">
+							<input class="controls__range controls__range--operations" type="range" name="range-video" min="0"
+								max="100" value="31" step="1">
 
 							<button class="button controls__button controls__button-subtitles" type="button">
 								<svg width="32" height="20">
@@ -202,6 +202,54 @@
 			</section>
 
 		</main>
+		<footer class="site-footer">
+			<p class="hashtag site-footer__hashtag">
+				<a class="hashtag__link" href="#">#VisitSedona</a>
+			</p>
+			<div class="social-links site-footer__social-links">
+				<ul class="social-links__list">
+					<li class="social-links__item">
+						<a class="social-links__link" href="https://twitter.com">
+							<p class="social-links__svg-box">
+								<svg width="18" height="14">
+									<use xlink:href="images/twitter.svg#twitter"></use>
+								</svg>
+							</p>
+						</a>
+						<span class="visually-hidden">Твиттер</span>
+					</li>
+					<li class="social-links__item">
+						<a class="social-links__link" href="https://www.facebook.com">
+							<p class="social-links__svg-box">
+								<svg width="9" height="18">
+									<use xlink:href="images/facebook.svg#facebook"></use>
+								</svg>
+							</p>
+						</a>
+						<span class="visually-hidden">Фейсбук</span>
+					</li>
+					<li class="social-links__item">
+						<a class="social-links__link" href="https://www.youtube.com">
+							<p class="social-links__svg-box">
+								<svg width="20" height="14">
+									<use xlink:href="images/youtube.svg#youtube"></use>
+								</svg>
+							</p>
+						</a>
+						<span class="visually-hidden">Ютуб</span>
+					</li>
+				</ul>
+			</div>
+
+			<p class="copyright site-footer__copyright">
+				<span class="copyright__text">Разработано</span>
+				<a class="copyright__link" href="https://htmlacademy.ru">
+					<svg width="27" height="34">
+						<use xlink:href="images/htmlacademy.svg#htmlacademy"></use>
+					</svg>
+				</a>
+			</p>
+		</footer>
 	</div>
 
 
