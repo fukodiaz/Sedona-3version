@@ -61,6 +61,7 @@ h1, h2, h3, p  {
 .wrapper-primary {
 	max-width: 320px;
 	margin: 0 auto;
+	background-color: #fff;
 }
 
 .site-navigat {
@@ -679,9 +680,9 @@ h1, h2, h3, p  {
 	border: none;
 }
 
-.review__fieldset--feeling {
-	display: inline-flex;
-}
+// .review__fieldset--feeling {
+// 	display: inline-flex;
+// }
 
 .review__legend {
 	text-align: center;
@@ -693,6 +694,7 @@ h1, h2, h3, p  {
 }
 
 .review__legend--personal-data {
+	margin: 0 auto;
 	margin-bottom: 21px;
 }
 
@@ -700,14 +702,22 @@ h1, h2, h3, p  {
 	margin-bottom: 22px;
 	text-align: left;
 	padding-left: 20px;
+	padding-right: 0;
+	//font-size: 17px;
 }
 
 .review__legend--feeling {
+	padding-left: 0;
+	padding-right: 0;
 	margin-bottom: 38px;
 }
 
 .review__legend--sight {
+	padding-left: 0;
+	padding-right: 0;
+	margin: 0 auto;
 	margin-bottom: 33px;
+	max-width: 100%; //ie11
 }
 
 .review__list {
@@ -737,7 +747,6 @@ h1, h2, h3, p  {
 		margin-left: 22px;
 	}
 
-
 .review__label--feeling,
 .review__label--sight {
 	display: inline-block;
@@ -750,6 +759,8 @@ h1, h2, h3, p  {
 
 .review__label--feeling {
 	margin-bottom: 47px;
+	font-size: 17px;
+
 	&[for="hard"] {
 		margin-bottom: 43px;
 	}
@@ -809,15 +820,20 @@ h1, h2, h3, p  {
 }
 
 .review__legend--emotions {
+	margin: 0 auto;
 	margin-bottom: 17px;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 
 .review__input--personal-data,
 .review__input--contacts {
 	box-sizing: border-box;
-	padding: 22px 22px 21px;
+	//padding: 22px 22px 21px;
+	padding: 18px 22px 17px;
 	width: 100%;
+	height: 58px; //ie11
 	border: none;
 	outline: none;
 	background-color: #f2f2f2;
@@ -842,25 +858,34 @@ h1, h2, h3, p  {
 } 
 
 .review__input--personal-data {
-	margin-left: auto;
-	&[name="name"] {
-		flex-basis: 235px;
-	}
-	&[name="surname"] {
-		flex-basis: 204px;
-	}
-	&[name="otchestvo"] {
-		flex-basis: 208px;
-	}
+	margin-left: 15px;
+	flex-grow: 1;
+
+	//margin-left: auto;
+	// &[name="name"] {
+	// 	flex-basis: 235px;
+	// }
+	// &[name="surname"] {
+	// 	flex-basis: 204px;
+	// }
+	// &[name="otchestvo"] {
+	// 	flex-basis: 208px;
+	//}
 
 	&:hover {
 		background-color: #e5e5e5;
 	}
 	&:active,
 	&:focus	{
-		background-color: #ffffff;
-		outline: 4px solid #e5e5e5;
-		outline-offset: -4px;
+		//background-color: #ffffff;
+		//outline: 4px solid #e5e5e5;
+		//outline-offset: -4px;
+		background-image: linear-gradient(to top, #e5e5e5 4px, transparent 4px),
+			linear-gradient(to bottom, #e5e5e5 4px, transparent 4px),
+			linear-gradient(to right, #e5e5e5 4px, transparent 4px),
+			linear-gradient(to left, #e5e5e5 4px, #ffffff 4px);
+		background-repeat: no-repeat;
+		background-position: 0 0;
 	}
 }
 
@@ -975,6 +1000,7 @@ h1, h2, h3, p  {
 	border: none;
 	outline: none;
 	resize: none;
+	overflow : auto; //ie11 scroll bar
 	background-color: #f2f2f2;
 		&::placeholder {
 		font: 700 18px 'PT Sans Narrow'; 
@@ -987,9 +1013,15 @@ h1, h2, h3, p  {
 	}
 	&:active,
 	&:focus	{
-		background-color: #ffffff;
-		outline: 4px solid #e5e5e5;
-		outline-offset: -4px;
+		// background-color: #ffffff;
+		// outline: 4px solid #e5e5e5;
+		// outline-offset: -4px;
+		background-image: linear-gradient(to top, #e5e5e5 4px, transparent 4px),
+			linear-gradient(to bottom, #e5e5e5 4px, transparent 4px),
+			linear-gradient(to right, #e5e5e5 4px, transparent 4px),
+			linear-gradient(to left, #e5e5e5 4px, #ffffff 4px);
+		background-repeat: no-repeat;
+		background-position: 0 0;
 	}
 }
 
@@ -1856,6 +1888,7 @@ h1, h2, h3, p  {
 .review__fieldset--personal-data {
 	position: relative;
 	flex-basis: 50%;
+	max-width: 50%;
 	box-sizing: border-box;
 	margin: 0 auto 71px;
 	padding-left: 58px;
@@ -1875,6 +1908,7 @@ h1, h2, h3, p  {
 
 .review__fieldset--feeling {
 	flex-basis: 50%;
+	max-width: 50%;
 	box-sizing: border-box;
 	margin: 0 auto;
 	order: -1;
@@ -1886,11 +1920,12 @@ h1, h2, h3, p  {
 }
 
 .review__legend {
-	font-size: 21px;
+	font-size: 20px; //ie11
 }
 
 .review__legend--personal-data,
 .review__legend--feeling {
+	margin: 0;
 	text-align: left;
 	padding: 0;
 }
@@ -1914,6 +1949,7 @@ h1, h2, h3, p  {
 }
 
 .review__legend--contacts {
+	margin: 0 auto;
 	margin-bottom: 25px;
 }
 
@@ -1956,6 +1992,7 @@ h1, h2, h3, p  {
 .review__label--feeling {
 	margin-left: 75px;
 	margin-bottom: 55px;
+	font-size: 18px;
 
 	&::before {
 		left: -75px;
@@ -1968,15 +2005,20 @@ h1, h2, h3, p  {
 }
 
 .review__input--personal-data {
-	&[name='name'] {
-		flex-basis: 216px;
-	}
-	&[name='surname'] {
-		flex-basis: 186px;
-	}
+	margin-left: 16px;
+
 	&[name='otchestvo'] {
-		flex-basis: 190px;
-	}
+			padding-left: 20px;
+		}
+	// &[name='name'] {
+	// 	flex-basis: 216px;
+	// }
+	// &[name='surname'] {
+	// 	flex-basis: 186px;
+	// }
+	// &[name='otchestvo'] {
+	// 	flex-basis: 190px;
+	// }
 }
 
 .review__input--contacts {
@@ -2446,6 +2488,10 @@ h1, h2, h3, p  {
 		margin-bottom: 0;
 	}
 
+	.review__legend {
+		font-size: 21px; 
+	}
+
 	.review__legend--feeling {
 		padding-left: 80px;
 	}
@@ -2481,7 +2527,7 @@ h1, h2, h3, p  {
 						margin-left: 100px;
 					}
 					&[for="rocks"] {
-						margin-left: 116px;
+						margin-left: 98px;//116px;
 					}
 				}
 			}
@@ -2489,6 +2535,7 @@ h1, h2, h3, p  {
 	}
 
 	.review__label--sight {
+
 		&[for="bridge"] {
 			margin-left: 81px;
 		}
@@ -2502,7 +2549,9 @@ h1, h2, h3, p  {
 	}
 
 	.review__label--contacts {
+		display: inline-block;
 		margin: 0;
+		margin-right: 15px; //auto;
 		& span {
 			display: none;
 		}
@@ -2511,25 +2560,31 @@ h1, h2, h3, p  {
 
 
 	.review__input--personal-data {
-		&[name='name'] {
-			flex-basis: 354px;
-		}
-		&[name='surname'] {
-			flex-basis: 323px;
-		}
+		margin-left: 18px;
 		&[name='otchestvo'] {
-			flex-basis: 327px;
+			padding-left: 22px;
 		}
+		// &[name='name'] {
+		// 	flex-basis: 354px;
+		// }
+		// &[name='surname'] {
+		// 	flex-basis: 323px;
+		// }
+		// &[name='otchestvo'] {
+		// 	flex-basis: 327px;
+		// }
 	}
 
 	.review__input--contacts {
-		margin-left: auto;
-		flex-basis: 347px;
+		margin-left: 0; //15px;
+		//flex-basis: 347px;
+		width: auto;
+		flex-grow: 1;
 
 		&[id='tel'] {
 			margin-right: 80px;
 			margin-bottom: 0;
-			flex-basis: 330px;
+			//flex-basis: 330px;
 		}
 	}
 

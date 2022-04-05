@@ -49,6 +49,7 @@ p {
 .wrapper-primary {
   max-width: 320px;
   margin: 0 auto;
+  background-color: #fff;
 }
 .site-navigat {
   position: relative;
@@ -592,11 +593,6 @@ p {
   padding: 0;
   border: none;
 }
-.review__fieldset--feeling {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
 .review__legend {
   text-align: center;
   font-weight: 700;
@@ -606,18 +602,26 @@ p {
   display: none;
 }
 .review__legend--personal-data {
+  margin: 0 auto;
   margin-bottom: 21px;
 }
 .review__legend--contacts {
   margin-bottom: 22px;
   text-align: left;
   padding-left: 20px;
+  padding-right: 0;
 }
 .review__legend--feeling {
+  padding-left: 0;
+  padding-right: 0;
   margin-bottom: 38px;
 }
 .review__legend--sight {
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0 auto;
   margin-bottom: 33px;
+  max-width: 100%;
 }
 .review__list {
   margin: 0;
@@ -656,6 +660,7 @@ p {
 }
 .review__label--feeling {
   margin-bottom: 47px;
+  font-size: 17px;
 }
 .review__label--feeling[for="hard"] {
   margin-bottom: 43px;
@@ -701,14 +706,18 @@ p {
   background-color: #d5d5d5;
 }
 .review__legend--emotions {
+  margin: 0 auto;
   margin-bottom: 17px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .review__input--personal-data,
 .review__input--contacts {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 22px 22px 21px;
+  padding: 18px 22px 17px;
   width: 100%;
+  height: 58px;
   border: none;
   outline: none;
   background-color: #f2f2f2;
@@ -752,28 +761,19 @@ p {
   margin-bottom: 25px;
 }
 .review__input--personal-data {
-  margin-left: auto;
-}
-.review__input--personal-data[name="name"] {
-  -ms-flex-preferred-size: 235px;
-  flex-basis: 235px;
-}
-.review__input--personal-data[name="surname"] {
-  -ms-flex-preferred-size: 204px;
-  flex-basis: 204px;
-}
-.review__input--personal-data[name="otchestvo"] {
-  -ms-flex-preferred-size: 208px;
-  flex-basis: 208px;
+  margin-left: 15px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 .review__input--personal-data:hover {
   background-color: #e5e5e5;
 }
 .review__input--personal-data:active,
 .review__input--personal-data:focus {
-  background-color: #ffffff;
-  outline: 4px solid #e5e5e5;
-  outline-offset: -4px;
+  background-image: linear-gradient(to top, #e5e5e5 4px, transparent 4px), linear-gradient(to bottom, #e5e5e5 4px, transparent 4px), linear-gradient(to right, #e5e5e5 4px, transparent 4px), linear-gradient(to left, #e5e5e5 4px, #ffffff 4px);
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 .review__input--contacts {
   padding-right: 80px;
@@ -844,6 +844,7 @@ p {
   border: none;
   outline: none;
   resize: none;
+  overflow: auto;
   background-color: #f2f2f2;
 }
 .review__textarea::-webkit-input-placeholder {
@@ -876,9 +877,9 @@ p {
 }
 .review__textarea:active,
 .review__textarea:focus {
-  background-color: #ffffff;
-  outline: 4px solid #e5e5e5;
-  outline-offset: -4px;
+  background-image: linear-gradient(to top, #e5e5e5 4px, transparent 4px), linear-gradient(to bottom, #e5e5e5 4px, transparent 4px), linear-gradient(to right, #e5e5e5 4px, transparent 4px), linear-gradient(to left, #e5e5e5 4px, #ffffff 4px);
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 .review__button {
   margin: 0 auto 39px;
@@ -1639,6 +1640,7 @@ p {
     position: relative;
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
+    max-width: 50%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0 auto 71px;
@@ -1657,6 +1659,7 @@ p {
   .review__fieldset--feeling {
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
+    max-width: 50%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0 auto;
@@ -1669,10 +1672,11 @@ p {
     margin-bottom: 55px;
   }
   .review__legend {
-    font-size: 21px;
+    font-size: 20px;
   }
   .review__legend--personal-data,
   .review__legend--feeling {
+    margin: 0;
     text-align: left;
     padding: 0;
   }
@@ -1692,6 +1696,7 @@ p {
     display: inline-block;
   }
   .review__legend--contacts {
+    margin: 0 auto;
     margin-bottom: 25px;
   }
   .review__legend--sight {
@@ -1731,6 +1736,7 @@ p {
   .review__label--feeling {
     margin-left: 75px;
     margin-bottom: 55px;
+    font-size: 18px;
   }
   .review__label--feeling::before {
     left: -75px;
@@ -1739,17 +1745,11 @@ p {
     margin-bottom: 0;
     margin-left: 174px;
   }
-  .review__input--personal-data[name='name'] {
-    -ms-flex-preferred-size: 216px;
-    flex-basis: 216px;
-  }
-  .review__input--personal-data[name='surname'] {
-    -ms-flex-preferred-size: 186px;
-    flex-basis: 186px;
+  .review__input--personal-data {
+    margin-left: 16px;
   }
   .review__input--personal-data[name='otchestvo'] {
-    -ms-flex-preferred-size: 190px;
-    flex-basis: 190px;
+    padding-left: 20px;
   }
   .review__input--contacts[id="tel"] {
     margin-bottom: 25px;
@@ -2105,6 +2105,9 @@ p {
   .review__fieldset--contacts {
     margin-bottom: 0;
   }
+  .review__legend {
+    font-size: 21px;
+  }
   .review__legend--feeling {
     padding-left: 80px;
   }
@@ -2143,7 +2146,7 @@ p {
     margin-left: 100px;
   }
   .review__list--sight .review__item:nth-child(2n) .review__label--sight[for="rocks"] {
-    margin-left: 116px;
+    margin-left: 98px;
   }
   .review__label--sight[for="bridge"] {
     margin-left: 81px;
@@ -2155,33 +2158,29 @@ p {
     margin-left: 80px;
   }
   .review__label--contacts {
+    display: inline-block;
     margin: 0;
+    margin-right: 15px;
   }
   .review__label--contacts span {
     display: none;
   }
-  .review__input--personal-data[name='name'] {
-    -ms-flex-preferred-size: 354px;
-    flex-basis: 354px;
-  }
-  .review__input--personal-data[name='surname'] {
-    -ms-flex-preferred-size: 323px;
-    flex-basis: 323px;
+  .review__input--personal-data {
+    margin-left: 18px;
   }
   .review__input--personal-data[name='otchestvo'] {
-    -ms-flex-preferred-size: 327px;
-    flex-basis: 327px;
+    padding-left: 22px;
   }
   .review__input--contacts {
-    margin-left: auto;
-    -ms-flex-preferred-size: 347px;
-    flex-basis: 347px;
+    margin-left: 0;
+    width: auto;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
   }
   .review__input--contacts[id='tel'] {
     margin-right: 80px;
     margin-bottom: 0;
-    -ms-flex-preferred-size: 330px;
-    flex-basis: 330px;
   }
   .review__send {
     margin-bottom: 66px;
