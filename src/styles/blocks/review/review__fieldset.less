@@ -1,0 +1,83 @@
+.review__fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+// .review__fieldset--feeling {
+// 	display: inline-flex;
+// }
+
+
+@media (max-width:767px) {
+	
+	.review__fieldset {
+		&:not(.review__fieldset--emotions) {
+			position: relative;
+
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: -1px;
+				left: -20px;
+				width: 320px;
+				height: 1px;
+				background-color: #e5e5e5;
+			}
+		}
+	}
+}
+
+
+@media (min-width: 768px) {
+
+	.review__fieldset {
+		flex-basis: 100%;
+		border-top: 1px solid #dbdbdb;
+	}
+
+	.review__fieldset--personal-data {
+		position: relative;
+		flex-basis: 50%;
+		max-width: 50%;
+		box-sizing: border-box;
+		margin: 0 auto 71px;
+		padding-left: 58px;
+		border: none;
+		&::before {
+			content: '';
+			position: absolute;
+			left: -1px;
+			bottom: 0px;
+			width: 1px;
+			height: 292px;
+			background-color: #dbdbdb;
+		}
+	}
+
+	.review__fieldset--feeling {
+		flex-basis: 50%;
+		max-width: 50%;
+		box-sizing: border-box;
+		margin: 0 auto;
+		order: -1;
+		border: none;
+	}
+
+	.review__fieldset--contacts {
+		margin-bottom: 55px;
+	}
+}
+
+
+@media (min-width: 1280px) {
+
+	.review__fieldset--personal-data {
+		margin-bottom: 70px;
+		padding-left: 79px;
+	}
+
+	.review__fieldset--contacts {
+		margin-bottom: 0;
+	}
+}

@@ -1,0 +1,41 @@
+.video-container {
+	position: relative;
+	width: 100%;
+	height: 201px;
+}
+
+.video-container__poster {
+	position: absolute;
+	bottom:0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	background: url('../images/poster-video-mobile.jpg') no-repeat bottom center;
+}
+
+
+@media (min-width: 768px) {
+
+	.video-container {
+		margin: 0 auto;//7.81%;
+		width: 84.37%;
+		height: 500px;
+	}
+
+	.video-container__poster {
+		background-image: url('../images/poster-video-tablet.jpg');
+	}
+}
+
+
+@media (min-width: 1280px) {
+
+	.video-container {
+		width: 800px;
+	}
+
+	.video-container__poster {
+		background-image: url('../images/poster-video-desktop.jpg');
+	}
+}

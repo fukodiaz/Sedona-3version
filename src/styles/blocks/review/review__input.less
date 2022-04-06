@@ -1,0 +1,169 @@
+.review__input--personal-data,
+.review__input--contacts {
+	box-sizing: border-box;
+	//padding: 22px 22px 21px;
+	padding: 18px 22px 17px;
+	width: 100%;
+	height: 58px; //ie11
+	border: none;
+	outline: none;
+	background-color: #f2f2f2;
+	
+	&::placeholder {
+		font: 700 18px 'PT Sans Narrow';
+		line-height: 26px;
+		color: #000000;
+	}
+}
+
+.review__input--personal-data {
+	margin-left: 15px;
+	flex-grow: 1;
+
+	//margin-left: auto;
+	// &[name="name"] {
+	// 	flex-basis: 235px;
+	// }
+	// &[name="surname"] {
+	// 	flex-basis: 204px;
+	// }
+	// &[name="otchestvo"] {
+	// 	flex-basis: 208px;
+	//}
+
+	&:hover {
+		background-color: #e5e5e5;
+	}
+	&:active,
+	&:focus	{
+		//background-color: #ffffff;
+		//outline: 4px solid #e5e5e5;
+		//outline-offset: -4px;
+		background-image: linear-gradient(to top, #e5e5e5 4px, transparent 4px),
+			linear-gradient(to bottom, #e5e5e5 4px, transparent 4px),
+			linear-gradient(to right, #e5e5e5 4px, transparent 4px),
+			linear-gradient(to left, #e5e5e5 4px, #ffffff 4px);
+		background-repeat: no-repeat;
+		background-position: 0 0;
+	}
+}
+
+.review__input--contacts {
+	padding-right: 80px;
+
+	&[id="tel"] {
+		margin-bottom: 15px;
+		background-image: url('../images/tel.svg'), linear-gradient(to left, #e6e6e6 0%, #e6e6e6 58px, #f2f2f2 58px, #f2f2f2 100%);
+		background-repeat: no-repeat;
+		background-position: right 19px top 20px, 0 0;
+	}
+	&[id="mail"] {
+		margin-bottom: 28px;
+		background-image: url('../images/mail.svg'), linear-gradient(to left, #e6e6e6 0%, #e6e6e6 58px, #f2f2f2 58px, #f2f2f2 100%);
+		background-repeat: no-repeat;
+		background-position: right 21px top 23px, 0 0;
+	}
+
+	&:hover {
+		&[id="tel"] {
+			background-image: url('../images/tel.svg'), linear-gradient(to left, #d5d5d5 58px, #e5e5e5 58px);
+			background-repeat: no-repeat;
+			background-position: right 19px top 20px, 0 0;
+		}
+		&[id="mail"] {
+			background-image: url('../images/mail.svg'), linear-gradient(to left, #d5d5d5 58px, #e5e5e5 58px);
+			background-repeat: no-repeat;
+			background-position: right 21px top 23px, 0 0;
+		}
+	}
+	&:active,
+	&:focus {
+		&[id="tel"] {
+			background-image: url('../images/tel.svg'), 
+			linear-gradient(to left, #d5d5d5 58px, transparent 58px),
+			linear-gradient(to top, #e5e5e5 3px, transparent 3px),
+			linear-gradient(to bottom, #e5e5e5 3px, transparent 3px),
+			linear-gradient(to left, transparent 58px, #e5e5e5 58px, #e5e5e5 61px, transparent 61px),
+			linear-gradient(to right, #e5e5e5 3px, transparent 3px),
+			linear-gradient(to left, #d5d5d5 58px, #ffffff 58px);
+			background-repeat: no-repeat;
+			background-position: right 19px top 20px, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+		}
+		&[id="mail"] {
+			background-image: url('../images/mail.svg'), 
+			linear-gradient(to left, #d5d5d5 58px, transparent 58px),
+			linear-gradient(to top, #e5e5e5 3px, transparent 3px),
+			linear-gradient(to bottom, #e5e5e5 3px, transparent 3px),
+			linear-gradient(to left, transparent 58px, #e5e5e5 58px, #e5e5e5 61px, transparent 61px),
+			linear-gradient(to right, #e5e5e5 3px, transparent 3px),
+			linear-gradient(to left, #d5d5d5 58px, #ffffff 58px);
+			background-repeat: no-repeat;
+			background-position: right 21px top 23px, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+			//outline: 4px solid #e5e5e5;
+			//outline-offset: -4px;
+		}
+	}
+}
+
+
+@media (min-width: 768px) {
+	
+	.review__input--personal-data {
+		margin-left: 16px;
+	
+		&[name='otchestvo'] {
+				padding-left: 20px;
+			}
+		// &[name='name'] {
+		// 	flex-basis: 216px;
+		// }
+		// &[name='surname'] {
+		// 	flex-basis: 186px;
+		// }
+		// &[name='otchestvo'] {
+		// 	flex-basis: 190px;
+		// }
+	}
+
+	.review__input--contacts {
+		&[id="tel"] {
+			margin-bottom: 25px;
+		}
+		&[id="mail"] {
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+@media (min-width: 1280px) {
+
+	.review__input--personal-data {
+		margin-left: 18px;
+		&[name='otchestvo'] {
+			padding-left: 22px;
+		}
+		// &[name='name'] {
+		// 	flex-basis: 354px;
+		// }
+		// &[name='surname'] {
+		// 	flex-basis: 323px;
+		// }
+		// &[name='otchestvo'] {
+		// 	flex-basis: 327px;
+		// }
+	}
+
+	.review__input--contacts {
+		margin-left: 0; //15px;
+		//flex-basis: 347px;
+		width: auto;
+		flex-grow: 1;
+
+		&[id='tel'] {
+			margin-right: 80px;
+			margin-bottom: 0;
+			//flex-basis: 330px;
+		}
+	}
+}

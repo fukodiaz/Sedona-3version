@@ -1,0 +1,48 @@
+.advantages-primary {
+	display: flex;
+	flex-direction: column;
+}
+
+.advantages-primary__photo {
+	background-color: #acd0e7;
+	& img {
+	display: block;
+	}
+}
+
+@media (min-width: 768px) {
+
+	.advantages-primary {
+		flex-direction: row;
+		align-items: stretch;
+	}
+
+	.advantages-primary__photo {
+		flex-basis: 67%;
+	
+		& img {
+			width: 100%;
+		}
+	}
+}
+
+@media (min-width: 1280px) {
+
+	.advantages-primary__photo {
+		position: relative;
+		overflow:hidden;
+		& img {
+			position: absolute;
+			left: 0;
+			top: -72px;
+			height: auto;
+		}
+	}
+
+	.advantages-primary__photo--bridge {
+		& img {
+			top: -76px;
+			bottom: -68px;
+		}
+	}
+}

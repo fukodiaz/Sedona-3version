@@ -1,0 +1,32 @@
+.page-header__logo {
+	display: block;
+	position: absolute;
+	z-index: 4;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 102px;
+	height: 83px;
+	& picture {display: block;}
+
+	& img {
+		max-height: 83px; //ie_11
+	}
+}
+
+@media (max-width:767px) {
+	.page-header__logo {
+		bottom: -27px;
+	}
+}
+
+@media (min-width: 1280px) {
+
+	.page-header__logo {
+		width: 187px;
+		height: 96px;
+
+		& img {
+			max-height: 96px; //ie_11
+		}
+	}
+}

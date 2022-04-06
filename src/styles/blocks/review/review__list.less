@@ -1,0 +1,80 @@
+.review__list {
+	.reset-list();
+}
+
+.review__list--personal-data {
+	& .review__item {
+		display: flex;
+		align-items: baseline;
+		margin-bottom: 20px;
+
+		&:last-child {
+			margin-bottom: 25px;
+		}
+	}
+} 
+
+
+@media (min-width: 768px) {
+	
+	.review__list--personal-data {
+		& .review__item {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.review__list--sight {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 38px;
+		& .review__item {
+			display: flex;
+			align-items: center;
+			flex-basis: 50%;
+			margin-bottom: 32px;
+			min-height: 56px;
+			&:nth-child(2n) {
+				& .review__label--sight {
+					margin-left: 110px;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+
+@media (min-width: 1280px) {
+
+	.review__list--contacts {
+		display: flex;
+		flex-wrap: wrap;
+
+		& .review__item {
+			display: flex;
+			align-items: baseline;
+			flex-basis: 50%;
+			margin-bottom: 55px;
+		}
+	}
+
+	.review__list--sight {
+		margin-bottom: 36px;
+		& .review__item {
+			flex-basis: 25%;
+
+			&:nth-child(2n) {
+				& .review__label--sight {
+					&[for="mountain"] {
+						margin-left: 100px;
+					}
+					&[for="rocks"] {
+						margin-left: 98px;//116px;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,142 @@
+.header-inner {
+	text-align: center;
+	background-color: #ffffff;
+}
+
+.header-inner--form {
+	padding: 40px 0 21px;
+
+	& .header-inner__heading {
+		margin-bottom: 33px;
+	}
+}
+
+.header-inner__heading {
+	margin: 0;
+	padding: 0 10%;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 24px;
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.header-inner__description {
+	margin: 0;
+	padding: 0 13%;
+	font-size: 14px;
+	line-height: 22px;
+	color: rgba(51, 51, 51, 0.3);
+}
+
+.header-inner--photo {
+	padding: 40px 0 28px;
+
+	& .header-inner__heading {
+		margin-bottom: 32px;
+		color: #000000;
+	}
+
+	& .header-inner__description {
+		padding: 0 16%;
+		color: #333333;
+	}
+}
+
+.header-inner--video {
+	padding: 34px 0 38px;
+}
+
+.header-inner__heading--video {
+	margin-bottom: 30px;
+	color: #000000;
+}
+
+.header-inner__description--video {
+	padding: 0 18%;
+	color: #333333;
+}
+
+
+@media (max-width:767px) {
+
+	.header-inner--form,
+	.header-inner--photo {
+		border-bottom: 1px solid #e5e5e5;
+	}	
+}
+
+
+@media (min-width: 768px) {
+
+	.header-inner--form {
+		padding: 71px 0 39px;
+	
+		& .header-inner__heading {
+			margin-bottom: 29px;
+		}
+		& .header-inner__description {
+			padding: 0 27%;
+		}
+	}
+
+	.header-inner__heading {
+		font-size: 30px;
+		line-height: 35px;
+		color: #000000;
+	}
+
+	.header-inner__description {
+		color: #333333;
+	}
+
+	.header-inner--photo {
+		padding: 71px 0 70px;
+	
+		& .header-inner__heading {
+			margin-bottom: 28px;
+		}
+		& .header-inner__description {
+			padding: 0 27%;
+		}
+	}
+
+	.header-inner--video {
+		padding: 63px 0 74px;
+	}
+
+	.header-inner__heading--video {
+		margin-bottom: 28px;
+	}
+
+	.header-inner__description--video {
+		padding: 0 27.5%;
+	}
+}
+
+
+@media (min-width: 1280px) {
+
+	.header-inner--form {
+		padding: 108px 0 30px;
+
+		& .header-inner__description {
+			padding: 0 35.3%;
+		}
+	}
+
+	.header-inner--photo {
+		padding: 108px 0 72px;
+		
+		& .header-inner__description {
+			padding: 0 35.5%;
+		}
+	}
+
+	.header-inner--video {
+		padding: 67px 0 72px;
+	}
+
+	.header-inner__description--video {
+		padding: 0 36%;
+	}
+}

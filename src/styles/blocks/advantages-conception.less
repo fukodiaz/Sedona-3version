@@ -1,0 +1,125 @@
+.advantages-conception {
+	padding: 58px 28px 39px;
+	text-align: center;
+	background-color: #81b3d2;
+}
+
+.advantages-conception__heading {
+	margin: 0;
+	margin-bottom: 13px;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.advantages-conception__heading--bridge {
+	& br {display: none;}
+}
+
+.advantages-conception__number {
+	position: relative;
+	display: inline-block;
+	margin-bottom: 16px;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 400;
+	color: #ffffff;
+
+	&::before, &::after {
+		content: '';
+		position: absolute;
+		top: calc(50% - 1px);
+		z-index: 5;
+		width: 9px;
+		height: 2px;
+		background-color: #ffffff;
+	}
+
+	&::before {
+		transform: translateX(-1em);  //translateX(calc(-100% - 6px));
+	}
+	&::after {
+		transform: translateX(0.3em); //translateX(calc(100% - 4px));
+	}
+}
+
+.advantages-conception__description {
+	margin: 0;
+	padding: 0 25px;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 400;
+	color: #ffffff;
+}
+
+.advantages-conception--bridge {
+	padding: 40px 0 38px;
+}
+
+@media (min-width: 768px) {
+
+	.advantages-conception {
+		box-sizing: border-box;
+		flex-basis: 33%;
+		//padding: 47px 47px 46px 46px;
+		padding: 30px 47px 29px 46px; //ie11
+	}
+
+	.advantages-conception__heading {
+		margin-bottom: 13px;
+		font-size: 21px;
+	}
+
+	.advantages-conception__heading--bridge {
+		& br {display: inline;}
+	}
+
+	.advantages-conception__number {
+		margin-bottom: 23px;
+	}
+	
+	.advantages-conception__description {
+		padding: 0 16px;
+	}
+
+	.advantages-conception--bridge {
+		order: 1;
+	
+		& .advantages-conception__heading--bridge {
+			padding: 0 8%; //ie11
+		}
+	}
+}
+
+
+@media (min-width: 1280px) {
+
+	.advantages-conception {
+		padding-top: 50px; 
+		padding-bottom: 53px;
+	}
+
+	.advantages-conception__heading {
+		padding: 0 21%;
+		margin-bottom: 13px;
+	}
+
+	.advantages-conception__number {
+		margin-bottom: 24px;
+	}
+
+	.advantages-conception__description {
+		padding: 0 12%;
+	}
+
+	.advantages-conception--bridge {
+	
+		& .advantages-conception__heading {
+			padding: 0 8%;
+		}
+		& .advantages-conception__description {
+			padding: 0 20%;
+		}
+	}
+}
