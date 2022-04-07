@@ -6,8 +6,7 @@
 	"private": true,
 	"homepage": "https://fukodiaz.github.io/Sedona-3version/",
 	"dependencies": {
-		"normalize.css": "^8.0.1",
-		"svgxuse": "^1.2.6"
+		"normalize.css": "^8.0.1"
 	},
 	"devDependencies": {
 		"browser-sync": "^2.26.7",
