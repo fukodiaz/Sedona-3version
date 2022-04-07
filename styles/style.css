@@ -687,10 +687,10 @@ p {
 }
 @media (min-width: 768px) {
   .advantages-another__advantages-conception .advantages-conception__heading {
-    padding: 0 12%;
+    padding: 0 24%;
   }
   .advantages-another__advantages-conception .advantages-conception__heading--square {
-    padding: 0 5%;
+    padding: 0 20%;
   }
   .advantages-another {
     -webkit-box-orient: horizontal;
@@ -723,10 +723,10 @@ p {
     padding-bottom: 65px;
   }
   .advantages-another__advantages-conception .advantages-conception__heading {
-    padding: 0 29.5%;
+    padding: 0 34%;
   }
   .advantages-another__advantages-conception .advantages-conception__heading--square {
-    padding: 0 25%;
+    padding: 0 28%;
   }
 }
 .services {
