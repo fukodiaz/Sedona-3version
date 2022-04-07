@@ -6,10 +6,9 @@
 	<title>Sedona</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
-	<script src="svgxuse.min.js" defer></script>
-	<script src="picturefill.min.js" defer></script>
+	<script src="scripts/svgxuse.min.js" defer></script>
+	<script src="scripts/picturefill.min.js" defer></script>
 	<link rel="stylesheet" href="styles/style-min.css">
-	<link rel="stylesheet" href="css/normalize.css">
 </head>
 
 <body>
@@ -213,23 +212,7 @@
 		</footer>
 	</div>
 
-
-	<script>
-		var nav = document.querySelector('.site-navigat');
-		var togg = document.querySelector('.site-navigat-button');
-
-		nav.classList.remove('site-navigat--notjs');
-		togg.addEventListener('click', function () {
-			if (nav.classList.contains('site-navigat--closed')) {
-				nav.classList.remove('site-navigat--closed');
-				nav.classList.add('site-navigat--opened');
-			} else {
-				nav.classList.add('site-navigat--closed');
-				nav.classList.remove('site-navigat--opened');
-			}
-		});
-	</script>
-
+	<script src="scripts/script.js"></script>
 </body>
 
 </html>
