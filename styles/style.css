@@ -578,6 +578,9 @@ p {
   font-weight: 400;
   color: #ffffff;
 }
+.advantages-conception__description br {
+  display: none;
+}
 .advantages-conception--bridge {
   padding: 40px 0 38px;
 }
@@ -587,10 +590,11 @@ p {
     box-sizing: border-box;
     -ms-flex-preferred-size: 33%;
     flex-basis: 33%;
-    padding: 30px 47px 29px 46px;
+    padding: 30px 0 29px;
   }
   .advantages-conception__heading {
     margin-bottom: 13px;
+    padding: 0 46px;
     font-size: 21px;
   }
   .advantages-conception__heading--bridge br {
@@ -601,6 +605,9 @@ p {
   }
   .advantages-conception__description {
     padding: 0 16px;
+  }
+  .advantages-conception__description br {
+    display: inline;
   }
   .advantages-conception--bridge {
     -webkit-box-ordinal-group: 2;
@@ -613,6 +620,7 @@ p {
 }
 @media (min-width: 1280px) {
   .advantages-conception {
+    padding: 30px 47px 29px 46px;
     padding-top: 50px;
     padding-bottom: 53px;
   }
@@ -625,6 +633,9 @@ p {
   }
   .advantages-conception__description {
     padding: 0 12%;
+  }
+  .advantages-conception__description br {
+    display: none;
   }
   .advantages-conception--bridge .advantages-conception__heading {
     padding: 0 8%;
@@ -727,6 +738,12 @@ p {
   }
   .advantages-another__advantages-conception .advantages-conception__heading--square {
     padding: 0 28%;
+  }
+  .advantages-another__advantages-conception .advantages-conception__description {
+    padding: 0 19.5%;
+  }
+  .advantages-another__advantages-conception .advantages-conception__description.advantages-conception__description--road {
+    padding: 0 23%;
   }
 }
 .services {
