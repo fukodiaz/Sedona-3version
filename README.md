@@ -7,3 +7,9 @@
 5. используется препроцессор Less, для автоматизации выбран Gulp
 
 итоговую версию сайта можно найти по данной ссылке: https://fukodiaz.github.io/Sedona-3version/
+# Preview
+<image src='assets/main.png' alt='Главная страница'>
+
+<image src='assets/page-photos.png' alt='Страница с фотографиями'>
+
+<image src='assets/form-review.png' alt='Форма отзыва'>
